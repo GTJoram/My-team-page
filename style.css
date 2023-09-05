@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	/* fonts */
+	--font-primary: "Poppins", sans-serif;
+	--font-secondary: "PT Sans", sans-serif;
+	--font-footer: "Montserrat", sans-serif;
+}
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: start;
+	padding: 71px 0 0 12px;
+	height: min-content;
+}
+.title {
+	font-family: var(--font-secondary);
+	font-size: 36px;
+	font-weight: 700;
+	letter-spacing: -1.62px;
+}
+
+.header-content {
+	margin-top: 38px;
+}
+.header-content h2 {
+	margin-bottom: 10px;
+	font-family: var(--font-primary);
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.header-content p {
+	width: 333px;
+	color: #000;
+	font-family: var(--font-primary);
+	font-size: 14px;
+	font-weight: 400;
+}
+
+main {
+	display: grid;
+	grid-template-areas:
+		"item1 item2"
+		"item3 item4"
+		"item5 item6";
+	place-content: center;
+
+	gap: 0 27px;
+	padding: 96px 19px;
+}
+
+.team {
+	position: relative;
+	min-width: 128px;
+	max-width: 300px;
+}
+.team img {
+	width: clamp(100px, 90%, 268px);
+}
+
+.team .team__info {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-family: var(--font-secondary);
+	font-size: 10px;
+	font-weight: 400;
+	text-transform: uppercase;
+	writing-mode: vertical-rl;
+}
+
+.team .team__name {
+	margin-top: 10px;
+	font-family: var(--font-primary);
+	font-size: 14px;
+	font-weight: 600;
+}
+
+#item-2 {
+	margin-top: 64px;
+}
+
+#item-4 {
+	margin-top: 64px;
+}
+#item-6 {
+	margin-top: 64px;
+}
+
+footer {
+	padding: 24px 0;
+	display: grid;
+	place-content: center;
+}
+.createdBy {
+	display: inline;
+	color: #bdbdbd;
+	text-align: center;
+	font-family: var(--font-footer);
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.createdBy .createdBy__link {
+	font-weight: 700;
+	color: #bdbdbd;
+}
+@media (min-width: 599px) {
+	header {
+		padding: 110px 0 0;
+		flex-direction: row;
+		justify-content: center;
+		align-items: start;
+		gap: clamp(10px, 20%, 215px);
+	}
+
+	.header-content {
+		margin: 0;
+	}
+
+	.header-content p {
+		font-size: 18px;
+	}
+}
+@media (min-width: 851px) {
+	main {
+		grid-template-areas:
+			"item1 item2 item3"
+			"item4 item5 item6";
+		gap: 60px;
+	}
+
+	.team .team__name {
+		font-size: 18px;
+	}
+
+	.team .team__info {
+		font-size: 12px;
+	}
+
+	#item-2 {
+		margin-top: 90px;
+	}
+	#item-4 {
+		margin-top: 0;
+	}
+	#item-5 {
+		margin-top: 90px;
+	}
+	#item-6 {
+		margin-top: 0;
+	}
+}
